@@ -1,1 +1,716 @@
 
+<!doctype html>
+<html lang="en">
+
+
+<head>
+
+	<link rel="icon" 
+      type="image/png" 
+      href="https://cdn2.hubspot.net/hubfs/3372701/TG-Email-Signatures/Logos/Signature-Logo-TC.png">
+
+	<title>Tamarindo Email Signature Generator</title>
+
+	<script type="text/javascript">
+
+		//data
+
+		var gen={};
+
+		function loadData() {
+
+		gen.companies = [];
+		gen.companies[0] = {};
+		gen.companies[1] = {};
+		gen.companies[2] = {};
+		gen.activeCompanyIndex = null;
+		// gen.banners = [];
+
+		// gen.banners[0].name = "FWNA 2020";
+		// gen.banners[0].src = "https://cdn2.hubspot.net/hubfs/3372701/TG-Email-Signatures/Banners/FWNA2020-FooterBanner-General.png";
+		// gen.banners[0].url = "https://northamerica.financingwind.com";
+		// gen.banners[0].alt = "Financing Wind North America 2020";
+
+		// gen.banners[1].name = "RRI Europe 2020";
+		// gen.banners[1].src = "https://cdn2.hubspot.net/hubfs/3372701/TG-Email-Signatures/Banners/RRI-Europe-2019-Banner-600x150.png";
+		// gen.banners[1].url = "http://renewablesreputationindex.com/";
+		// gen.banners[1].alt = "Renewables Reputation Index Europe 2019";
+
+		// gen.banners[2].name = "North American Power List 2020";
+		// gen.banners[2].src = "https://cdn2.hubspot.net/hubfs/3372701/TG-Email-Signatures/Banners/AWAW-NorthAmericanPowerList2020-Banner-600x150.png";
+		// gen.banners[2].url = "http://membership.awordaboutwind.com/north-american-power-list-2020";
+		// gen.banners[2].alt = "North American Power List 2020";
+
+
+		//TG
+
+		gen.companies[0].name = "Tamarindo Group";
+
+		gen.companies[0].primaryUrl = "www.tamarindogroup.com";
+		gen.companies[0].secondaryUrl = "";
+		gen.companies[0].hasSecondaryURL = false;
+
+		gen.companies[0].primaryPhone = "+44 (0) 20 7100 5134";
+		gen.companies[0].secondaryPhone = "";
+		gen.companies[0].hasSecondaryPhone = false;
+
+		gen.companies[0].twitterUrl = "https://twitter.com/tamarindocomms";
+		gen.companies[0].linkedinUrl = "https://www.linkedin.com/company/tamarindo-communications/";
+
+		gen.companies[0].logo = "https://cdn2.hubspot.net/hubfs/3372701/TG-Email-Signatures/TamarindoGroup-Logo-VerticalBlue-Tight-RGB-150px.png";
+		gen.companies[0].twitterIcon = "https://cdn2.hubspot.net/hubfs/3372701/TG-Email-Signatures/Signature-Twitter-TC.png";
+		gen.companies[0].linkedinIcon = "https://cdn2.hubspot.net/hubfs/3372701/TG-Email-Signatures/Signature-LinkedIn-TC.png";
+
+		gen.companies[0].legal = "Tamarindo Communications Limited, trading as Tamarindo Communications. Registered in England: 7427017. Registered office: 2nd Floor, 167-169 Great Portland Street, London, W1W 5PF. Tamarindo Communications Limited is a part of The Tamarindo Consultancy Group.";
+		gen.companies[0].color = "#242b61";
+		gen.companies[0].address = "Tamarindo Group, Tyndale House, 3rd Floor, 134 Cowley Road, Oxford, OX4 1JH"
+
+		//TC
+
+		gen.companies[1].name = "Tamarindo Communications";
+
+		gen.companies[1].primaryUrl = "www.tamarindocomms.com";
+		gen.companies[1].secondaryUrl = "www.tamarindogroup.com";
+		gen.companies[1].hasSecondaryURL = true;
+
+		gen.companies[1].primaryPhone = "+44 (0) 20 7100 5134";
+		gen.companies[1].secondaryPhone = "";
+		gen.companies[1].hasSecondaryPhone = false;
+
+		gen.companies[1].twitterUrl = "https://twitter.com/tamarindocomms";
+		gen.companies[1].linkedinUrl = "https://www.linkedin.com/company/tamarindo-communications/";
+
+		gen.companies[1].logo = "https://cdn2.hubspot.net/hubfs/3372701/TG-Email-Signatures/TamarindoCommunications-Logo-VerticalBlue-Tight-RGB-150px.png";
+		gen.companies[1].twitterIcon = "https://cdn2.hubspot.net/hubfs/3372701/TG-Email-Signatures/Signature-Twitter-TC.png";
+		gen.companies[1].linkedinIcon = "https://cdn2.hubspot.net/hubfs/3372701/TG-Email-Signatures/Signature-LinkedIn-TC.png";
+
+		gen.companies[1].legal = "Tamarindo Communications Limited, trading as Tamarindo Communications. Registered in England: 7427017. Registered office: 2nd Floor, 167-169 Great Portland Street, London, W1W 5PF. Tamarindo Communications Limited is a part of The Tamarindo Consultancy Group.";
+		gen.companies[1].color = "#242b61";
+		gen.companies[1].address = "Tamarindo Group, Tyndale House, 3rd Floor, 134 Cowley Road, Oxford, OX4 1JH"
+
+
+		//AWAW
+
+		gen.companies[2].name = "A Word About Wind";
+
+		gen.companies[2].primaryUrl = "www.awordaboutwind.com";
+		gen.companies[2].secondaryUrl = "www.tamarindogroup.com";
+		gen.companies[2].hasSecondaryURL = true;
+
+		gen.companies[2].primaryPhone = "+44 (0) 207 100 1616";
+		gen.companies[2].secondaryPhone = "";
+		gen.companies[2].hasSecondaryPhone = false;
+
+		gen.companies[2].twitterUrl = "https://twitter.com/awordaboutwind";
+		gen.companies[2].linkedinUrl = "https://www.linkedin.com/company/awordaboutwind-com/";
+
+		gen.companies[2].logo = "https://cdn2.hubspot.net/hubfs/3372701/TG-Email-Signatures/Signature-Logo-AWAW.png";
+		gen.companies[2].twitterIcon = "https://cdn2.hubspot.net/hubfs/3372701/TG-Email-Signatures/Signature-Twitter-AWAW.png";
+		gen.companies[2].linkedinIcon = "https://cdn2.hubspot.net/hubfs/3372701/TG-Email-Signatures/Signature-LinkedIn-AWAW.png";
+
+		gen.companies[2].legal = "A Word About Wind Limited, trading as A Word About Wind. Registered in England: 8597371. Registered office: 2nd Floor, 167-169 Great Portland Street, London, W1W 5PF. A Word About Wind Limited is a part of The Tamarindo Consultancy Group.";
+		gen.companies[2].color = "#04798F";
+		gen.companies[2].address = "Tamarindo Group, Tyndale House, 3rd Floor, 134 Cowley Road, Oxford, OX4 1JH"
+
+
+
+		}
+
+
+
+		//get form fields
+
+		function getFormContents () {
+			gen.form = {};
+			gen.form.name = document.getElementById("input-name").value;
+			gen.form.title = document.getElementById("input-title").value;
+			gen.form.company = document.getElementById("input-company").value;
+			gen.form.email = document.getElementById("input-email").value;
+			gen.form.phone1 = document.getElementById("input-phone1").value;
+			gen.form.phone2 = document.getElementById("input-phone2").value;
+			gen.form.web1 = document.getElementById("input-web1").value;
+			gen.form.web2 = document.getElementById("input-web2").value;
+			gen.form.address = document.getElementById("input-address").value;
+			gen.form.legal = document.getElementById("input-legal").value;
+			gen.form.bannerSrc = document.getElementById("input-bannerSrc").value;
+			gen.form.bannerURL = document.getElementById("input-bannerURL").value;
+			gen.form.bannerAlt = document.getElementById("input-bannerAlt").value;
+
+			if (gen.form.company == "Tamarindo Group") {
+				gen.activeCompanyIndex = 0;
+			}
+			else if (gen.form.company == "Tamarindo Communications") {
+				gen.activeCompanyIndex=1;
+			}
+			else if (gen.form.company == "A Word About Wind") {
+				gen.activeCompanyIndex=2;
+			}
+			else {}
+
+		}
+
+		function updateFormOnCompanySelect () {
+
+			getFormContents();
+
+			updateFormWithCompany(gen.activeCompanyIndex);
+
+			function updateFormWithCompany(index) {
+				var comp = gen.companies[index];
+
+				document.getElementById("input-phone1").value = comp.primaryPhone;
+				if (comp.hasSecondaryPhone==true) {
+					document.getElementById("input-phone2").value = comp.secondaryPhone;
+				}
+				else {
+					document.getElementById("input-phone2").value = "";
+				}
+
+				document.getElementById("input-web1").value = comp.primaryUrl;
+				if (comp.hasSecondaryURL==true) {
+					document.getElementById("input-web2").value = comp.secondaryUrl;
+				}
+				else {
+					document.getElementById("input-web2").value = "";
+				}
+
+				document.getElementById("input-legal").value = comp.legal;
+
+				document.getElementById("input-address").value = comp.address;
+
+
+			}
+
+		}
+
+		function updateSig () {
+
+			getFormContents();
+
+			function addHTTP(str) {
+				if(str.startsWith("http")) {
+					return str;
+				}
+				else {
+					return "http://" + str;
+				}
+			}
+
+			var activeCompany = gen.companies[gen.activeCompanyIndex];
+
+			//name
+				document.getElementById("name").innerHTML = gen.form.name;
+
+			//title
+				document.getElementById("title").innerHTML = gen.form.title;
+
+			//company
+				document.getElementById("company").innerHTML = gen.form.company;
+			
+			//email
+				document.getElementById("link-email").innerHTML = gen.form.email;
+				document.getElementById("link-email").setAttribute("href","mailto:"+gen.form.email);
+			
+			//phone
+				document.getElementById("phone1").innerHTML = gen.form.phone1;
+				if(gen.form.phone2=="") {
+					document.getElementById("phone-sep").innerHTML = "";
+					document.getElementById("phone2").innerHTML = "";
+				}
+				else {
+					document.getElementById("phone2").innerHTML = gen.form.phone2;
+				}
+			
+			//web
+				document.getElementById("link-web1").innerHTML = gen.form.web1;
+				document.getElementById("link-web1").setAttribute("href", addHTTP(gen.form.web1));
+				if(gen.form.web2=="") {
+					document.getElementById("web-sep").innerHTML = "";
+					document.getElementById("link-web2").innerHTML = "";
+				}
+				else {
+					document.getElementById("link-web2").innerHTML = gen.form.web2;
+					document.getElementById("link-web2").setAttribute("href", addHTTP(gen.form.web2));
+				}
+				
+			//address
+				document.getElementById("address").innerHTML = gen.form.address;
+			
+			//logo
+				document.getElementById("img-logo").setAttribute("src",activeCompany.logo);
+				document.getElementById("link-logo").setAttribute("href", addHTTP(gen.form.web1));
+
+
+			//banner
+				document.getElementById("link-banner").setAttribute("href", addHTTP(gen.form.bannerURL));
+
+				//re-add banner if previously removed
+				document.getElementById("link-banner").innerHTML = "<img id=\"img-banner\" width=\"600\" src=\"https://cdn2.hubspot.net/hubfs/3372701/TC-RRI/RRI-EU-2019/RRI-Europe-2019-Banner-600x150.png\" alt=\"\" style=\"max-width: 600px\">"
+
+				document.getElementById("img-banner").setAttribute("src",addHTTP(gen.form.bannerSrc));
+				document.getElementById("img-banner").setAttribute("alt",gen.form.bannerAlt);
+
+				//if no banner source, just remove the img element as otherwise it takes up space
+				if(gen.form.bannerSrc.length < 5) {
+					document.getElementById("link-banner").innerHTML ="";
+				}
+
+			//legal blurb
+				document.getElementById("legal").innerHTML = gen.form.legal;
+
+			//colors
+				var myTable = document.getElementById("table-wrapper");
+				for (var i = 0; i < gen.companies.length; i++) {
+					myTable.innerHTML = myTable.innerHTML.split(gen.companies[i].color).join(activeCompany.color);
+				}
+
+			//socials
+				document.getElementById("img-icon1").setAttribute("src",activeCompany.twitterIcon);
+				document.getElementById("link-icon1").setAttribute("href",activeCompany.twitterUrl);
+				document.getElementById("img-icon2").setAttribute("src",activeCompany.linkedinIcon);
+				document.getElementById("link-icon2").setAttribute("href",activeCompany.linkedinUrl);
+
+
+
+		}
+
+	function clearForm() {
+		var elements = document.querySelectorAll("#form input[type=text]");
+		for (var i = 0; i<elements.length; i++) {
+	    elements[i].value = "";
+		}
+	}
+
+	function onLoadScripts() {
+		loadData();
+		clearForm();
+		//copyToPasteboard();
+	}
+
+	function copyToPasteboard() {
+		var copyTextareaBtn = document.querySelector('.js-textareacopybtn');
+		console.log(copyTextareaBtn);
+
+		copyTextareaBtn.addEventListener('click', function(event) {
+			var copyTextarea = document.querySelector('.js-copytextarea');
+			copyTextarea.focus();
+			copyTextarea.select();
+
+			try {
+				var successful = document.execCommand('copy');
+				var msg = successful ? 'successful' : 'unsuccessful';
+				console.log('Copying text command was ' + msg);
+			} catch (err) {
+				console.log('Oops, unable to copy');
+			}
+		});
+	}
+
+	function copyElementContents(el) {
+		var body = document.body, range, sel;
+		if (document.createRange && window.getSelection) {
+			range = document.createRange();
+			sel = window.getSelection();
+			sel.removeAllRanges();
+			try {
+				range.selectNodeContents(el);
+				sel.addRange(range);
+			} catch (e) {
+				range.selectNode(el);
+				sel.addRange(range);
+			}
+		} else if (body.createTextRange) {
+			range = body.createTextRange();
+			range.moveToElementText(el);
+			range.select();
+		}
+		document.execCommand("Copy");
+	}
+
+	window.onload = onLoadScripts();
+
+
+
+	</script>
+
+
+		<!-- form css -->
+	<style type="text/css">
+	input, select option, button#submit{
+		font-size: 1.1em;
+	}
+	#form p {
+		font-size: 1.1em;
+		xtext-transform: uppercase;
+		color: #9eb7f0;
+		padding: 8px;
+		margin-bottom: 2px;
+		margin-top: 5px;
+	}
+
+	#form {
+		margin-bottom: 30px;
+		font-weight: 200;
+
+	}
+
+	#form {
+		font-family: 'Lato', Helvetica, Arial, sans-serif;
+		color: white;
+		font-size: 11px;
+	}
+
+	button#submit, button#clear {
+		width: 100px;
+		height: 50px;
+		display: block;
+		margin-top: 20px;
+		color: white;
+		background: #242b61;
+		cursor: pointer;
+
+	}
+
+	button#submit:hover, button#submit:active {
+		background: #1b2046
+	}
+
+	#instruction {
+		opacity: 0;
+		margin-top: 20px !important;
+		color: red !important;
+		text-transform: none !important;
+		margin-bottom: 20px !important;
+
+	}
+
+	.instruction {
+		padding: 10px;
+	}
+
+	.instruction .title {
+		font-size: 1.4em;
+	}
+
+	.instruction ol, .instruction li {
+		margin-block-start: 0;
+		padding-inline-start: 20px;
+		font-size: 1.1em;
+	}
+
+	.instruction p {
+		color: white !important;
+	}
+
+	h1 {
+		font-size: 24px;
+		padding-bottom: 10px;
+		margin: 20px;
+		color: white;
+		font-weight: 400;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		margin-left: 0px;
+		padding-left: 20px;
+	}
+
+	body {
+		background-color: #053142;
+		margin: 0px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	#signature {
+		background-color: white;
+		padding: 20px;
+		position: sticky;
+		top:0;
+
+	}
+
+	#form-section {
+		width: 50%;
+	}
+
+	input, select, button {
+		margin-left: 10px;
+	}
+
+	.line {
+		border-top: 1px dashed white;
+		color: white;
+		margin-top: 20px;
+		margin-bottom: 10px;
+		font-size: 12px;
+		font-weight: 400;
+		padding-left: 20px; 
+
+	}
+
+	button {
+		xborder: none;
+		box-shadow: none;
+		background-color: red;
+		color: blue;
+	}
+
+	button#clearn {
+		background-color: grey;
+		color: black;
+	}
+
+	#form a {
+		color: #EA6556;
+		font-weight: 400;
+	}
+
+	</style>
+
+</head>
+
+
+
+
+<body>
+
+	<section id="form-section">
+		<div id="form">
+			<h1>Tamarindo Email Signature Generator</h1>
+
+			<div class="line">
+			</div>
+
+			<div class="instruction">
+				<h2 class="title">Instructions:</h2>
+				<ol>
+					<li>Fill in your name, email and title, and choose a company. Phone number, website, address and legal text will update automatically.</li>
+					<li>If you want to, add a banner image. See <a href="https://app.hubspot.com/files/3372701/?folderId=25037464913&folderPath=TG-Email-Signatures%2FBanners" target="_blank">HERE</a> for a link of available banner images.</li>
+					<li>Then click <em>Make signature</em> and the signature will update.</li>
+					<li>Select and copy everything in the signature box, and paste into your email client.</li>
+				</ol>
+				<p class="instruction">For details where to paste this in your email client - see more info here: <a target="_blank" href="https://support.google.com/mail/answer/8395?co=GENIE.Platform%3DDesktop&hl=en">Gmail</a> / <a target="_blank" href="https://support.office.com/en-gb/article/create-and-add-a-signature-to-messages-8ee5d4f4-68fd-464a-a1c1-0e1c80bb27f2">Outlook</a>.</p>
+			</div> 
+
+			<div class="line">
+			</div>
+
+			<p class="label">Name</p>
+			<input id="input-name" required="true" size="35" type="text" value="Stanley Barker">
+
+			<p class="label">Title</p>
+			<input id="input-title" required="true" size="35" type="text" value="Woofer and Chief Apple Core Eater">
+
+			<p class="label">Email</p>
+			<input id="input-email" required="true" size="35" type="text" value="stanley.barker@tamarindocomms.com">
+
+			<p class="label">Company</p>
+			<select id="input-company" required="true" size="3" onchange="updateFormOnCompanySelect()">
+				<option selected="true" value="Tamarindo Communications">Tamarindo Communications</option>
+				<option value="A Word About Wind">A Word About Wind</option>
+				<option value="Tamarindo Group">Tamarindo Group</option>
+			</select>
+
+			<div class="line">
+				Fields below will update when you select a company. You can edit them if you want.
+			</div>
+
+			<p class="label">Phone 1</p>
+			<input id="input-phone1" required="false" size="35" type="text" value="">
+
+			<p class="label">Phone 2 (leave blank if not needed)</p>
+			<input id="input-phone2" required="false" size="35" type="text" value="">
+
+			<p class="label">Web 1</p>
+			<input id="input-web1" required="false" size="35" type="text" value="">			
+
+			<p class="label">Web 2</p>
+			<input id="input-web2" required="false" size="35" type="text" value="">
+
+			<p class="label">Address</p>
+			<input id="input-address" required="false" size="35" type="text" value="">
+
+			<p class="label">Legal blurb</p>
+			<input id="input-legal" required="false" size="35" type="text" value="">
+
+			<!--<div class="line">
+				Choose a banner image from one of the options, or enter your own settings.
+			</div>
+
+			<p class="label">Choose a banner image</p>
+			<select id="input-banner" size="3" onchange="updateFormOnBannerSelect()">
+				<option selected="false" value=0></option>
+				<option selected="false" value=1></option>
+				<option selected="false" value=2></option>
+			</select>-->
+
+			<div class="line">
+				Fill out the following to add a banner.
+			</div>
+
+
+			<p class="label">Banner Image Source</p>
+			<input id="input-bannerSrc" required="false" size="35" type="text" value="">			
+
+			<p class="label">Banner Image Destination</p>
+			<input id="input-bannerURL" required="false" size="35" type="text" value="">
+
+			<p class="label">Banner Image Alt text</p>
+			<input id="input-bannerAlt" required="false" size="35" type="text" value="">
+
+			<div class="line"></div>
+
+			<button id="submit" onclick="updateSig()">Make signature</button>
+
+			<button id="clear" onclick="clearForm()">Clear form</button>
+			
+			<!--<button class="js-textareacopybtn" id="copy">Copy to pasteboard</button>-->
+
+
+			<p class="label" id="instruction">Now select and copy the signature below, and paste into your Gmail or Outlook signature settings</p>
+
+		</div>
+
+	</section>
+
+
+
+	<section id="signature">
+
+		<!-- START SIGNATURE -->
+
+		<table class="js-copytextarea" id="table-wrapper" cellspacing="0" cellpadding="0" style="max-width: 600px;">
+			<tr>
+				<td style="max-width: 600px;">
+					<table id="table-content" cellspacing="0" cellpadding="0">
+						<tr>
+							<td>
+								<table id="table-logo" cell-spacing="0" cellpadding="10">
+									<tr>
+										<td>
+											<a id="link-logo" href="logo-destination">
+											<img id="img-logo" src="https://cdn2.hubspot.net/hubfs/3372701/TG-Email-Signatures/Signature-Logo-AWAW.png" width="120" style="max-width: 120px;">
+											</a>
+										</td>
+									</tr>
+								</table>		
+							</td>
+							<td>
+
+								<table id="table-text" cellspacing="2" cellpadding="2">
+									<tr>
+										<td id="name" class="colored" style="color: #242b61; font-size: 14px; font-weight: 600; font-family: 'Lato', Helvetica, sans-serif;">Stanley James Barker</td>
+									</tr>
+									<tr>
+										<td id="title" style="color: grey; font-size: 12px; font-weight: 400; font-family: 'Lato', Helvetica, sans-serif;"><i>Chief Woofer and Tail-Wagger</i></td>
+									</tr>
+									<tr>
+										<td id="company" class="colored" style="color: #242b61; font-size: 12px; font-weight: 400; font-family: 'Lato', Helvetica, sans-serif;"><strong>Tamarindo Communications</strong></td>
+									</tr>
+									<tr>
+										<td>
+											<table id="table-phone" cellspacing="0" cellpadding="1">
+												<tr>
+													<td id="phone1" style="color: #242b61; font-size: 12px; font-weight: 400; font-family: 'Lato', Helvetica, sans-serif;">+44 (0) 20 7100 5134</td>
+													<td id="phone-sep" style="color: #242b61; font-size: 12px; font-weight: 400; font-family: 'Lato', Helvetica, sans-serif;">  |  </td>
+													<td id="phone2" style="color: #242b61; font-size: 12px; font-weight: 400; font-family: 'Lato', Helvetica, sans-serif;">+44 (0) 20 7100 5134</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<table id="table-email" cellspacing="0" cellpadding="1">
+												<tr>
+													<td id="email" style="color: #242b61; font-size: 12px; font-weight:400; font-family: 'Lato', Helvetica, sans-serif;">
+														<a id="link-email" href="mailto:link" class="colored" style="color: #242b61">stanley.barker@tamarindocomms.com</a>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<table id="table-web" cellspacing="0" cellpadding="1">
+												<tr>
+													<td id="web1" style="color: #242b61; font-size: 12px; font-weight: 400; font-family: 'Lato', Helvetica, sans-serif;">
+														<a id="link-web1" href="http://www.tamarindocomms.com" class="colored" style="color: #242b61">www.tamarindocomms.com</a>
+													</td>
+													<td id="web-sep" style="color: #242b61; font-size: 12px; font-weight: 400; font-family: 'Lato', Helvetica, sans-serif;">  |  </td>
+													<td id="web2" style="color: #242b61; font-size: 12px; font-weight: 400; font-family: 'Lato', Helvetica, sans-serif;">
+														<a id="link-web2" href="http://www.tamarindocomms.com" class="colored" style="color: #242b61">www.awordaboutwind.com</a>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+									<tr>
+										<td id="address" style="color: #242b61; font-size: 12px; font-weight: 400; font-family: 'Lato', Helvetica, sans-serif;">Tamarindo Group, Tyndale House, 3rd Floor, 134 Cowley Road, Oxford, OX4 1JH</td>
+									</tr>
+									<tr>
+										<td>
+											<table id="table-icon" cellspacing="0" cellpadding="1">
+												<tr>
+													<td id="icon1" style="color: #242b61; font-size: 12px; font-weight: 400; font-family: 'Lato', Helvetica, sans-serif;">
+														<a id="link-icon1" href="icon1-destination">
+															<img id="img-icon1" src="https://cdn2.hubspot.net/hubfs/3372701/TC%20-%20Twitter%20icon%20-%20email%20signatures.png" width="30" alt="alt-icon1" style="max-width: 30px;">
+														</a>
+													</td>
+													<td id="icon2" style="color: #242b61; font-size: 12px; font-weight: 400; font-family: 'Lato', Helvetica, sans-serif;">
+														<a id="link-icon2" href="icon2-destination">
+															<img id="img-icon2" src="https://cdn2.hubspot.net/hubfs/3372701/TC%20-%20Linkedin%20icon%20-%20email%20signatures.png" width="30" alt="alt-icon2" style="max-width: 30px;">
+														</a>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+
+								</table>					
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+			</tr>
+			<tr>
+				<td>
+					<table id="spacer-banner" cellspacing="0" cellpadding="10">
+						<tr>
+							<td>
+							</td>
+						</tr>
+					</table>
+
+					<table id="table-banner" cellspacing="0" cellpadding="1">
+						<tr>
+							<td id="banner">
+								<a id="link-banner" href="http://www.tamarindogroup.com">
+									<img id="img-banner" width="600" src="https://cdn2.hubspot.net/hubfs/3372701/TG-Email-Signatures/Banners/Blank-Banner.png" alt="" style="max-width: 600px;">
+								</a>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<table id="table-legal" cellspacing="0" cellpadding="1">
+						<tr>
+							<td id="legal" style="max-width: 600px; color: #242b61; font-size: 10px; font-weight: 400; font-family: 'Lato', Helvetica, sans-serif;">
+								Tamarindo Communications Limited, trading as Tamarindo Communications.  Registered in England: 7427017.  Registered office: 2nd Floor, 167-169 Great Portland Street, London, W1W 5PF.  Tamarindo Communications Limited is a part of The Tamarindo Consultancy Group.
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+
+		<!-- END SIGNATURE -->
+
+
+	</section>
+
+</body>
