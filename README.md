@@ -1,2 +1,2 @@
-# stanley-barker
+# Signature
 Email signature generator for Tamarindo Group
