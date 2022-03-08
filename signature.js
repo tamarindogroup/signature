@@ -10,22 +10,6 @@
     gen.companies[2] = {};
     gen.activeCompanyIndex = null;
     gen.activeSocialMediaIndex = null;
-    // gen.banners = [];
-
-    // gen.banners[0].name = "FWNA 2020";
-    // gen.banners[0].src = "https://cdn2.hubspot.net/hubfs/3372701/TG-Email-Signatures/Banners/FWNA2020-FooterBanner-General.png";
-    // gen.banners[0].url = "https://northamerica.financingwind.com";
-    // gen.banners[0].alt = "Financing Wind North America 2020";
-
-    // gen.banners[1].name = "RRI Europe 2020";
-    // gen.banners[1].src = "https://cdn2.hubspot.net/hubfs/3372701/TG-Email-Signatures/Banners/RRI-Europe-2019-Banner-600x150.png";
-    // gen.banners[1].url = "http://renewablesreputationindex.com/";
-    // gen.banners[1].alt = "Renewables Reputation Index Europe 2019";
-
-    // gen.banners[2].name = "North American Power List 2020";
-    // gen.banners[2].src = "https://cdn2.hubspot.net/hubfs/3372701/TG-Email-Signatures/Banners/AWAW-NorthAmericanPowerList2020-Banner-600x150.png";
-    // gen.banners[2].url = "http://membership.awordaboutwind.com/north-american-power-list-2020";
-    // gen.banners[2].alt = "North American Power List 2020";
 
 
     //TG
