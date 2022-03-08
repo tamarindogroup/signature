@@ -205,7 +205,7 @@
                 return str;
             }
             else {
-                return "http://" + str;
+                return "https://" + str;
             }
         }
 
@@ -224,20 +224,28 @@
         //email
             document.getElementById("link-email").innerHTML = gen.form.email;
             document.getElementById("link-email").setAttribute("href","mailto:"+gen.form.email);
+            if(gen.form.email == "") {document.getElementById("link-email").remove()}
         
         //phone
-            document.getElementById("phone1").innerHTML = gen.form.phone1;
+            if(gen.form.phone1=="") {
+                document.getElementById("phone1").remove();
+                document.getElementById("phone-sep").remove();
+            }
+            else {
+                document.getElementById("phone1").innerHTML = gen.form.phone1;
+            }
+
             if(gen.form.phone2=="") {
-                document.getElementById("phone-sep").innerHTML = "";
-                document.getElementById("phone2").innerHTML = "";
+                document.getElementById("phone2").remove();
+                document.getElementById("phone-sep").remove();
             }
             else {
                 document.getElementById("phone2").innerHTML = gen.form.phone2;
             }
 
             if(gen.form.phone3=="") {
-                document.getElementById("phone-sep-2").innerHTML = "";
-                document.getElementById("phone3").innerHTML = "";
+                document.getElementById("phone3").remove();
+                document.getElementById("phone-sep-2").remove();
             }
             else {
                 document.getElementById("phone-sep-2").innerHTML = "&nbsp; | &nbsp;";
@@ -245,11 +253,17 @@
             }
         
         //web
-            document.getElementById("link-web1").innerHTML = gen.form.web1;
-            document.getElementById("link-web1").setAttribute("href", addHTTP(gen.form.web1));
             if(gen.form.web2=="") {
-                document.getElementById("web-sep").innerHTML = "";
-                document.getElementById("link-web2").innerHTML = "";
+                document.getElementById("link-web1").remove();
+                document.getElementById("web-sep").remove();
+            }
+            else {
+                document.getElementById("link-web1").innerHTML = gen.form.web1;
+                document.getElementById("link-web1").setAttribute("href", addHTTP(gen.form.web1));
+            }
+            if(gen.form.web2=="") {
+                document.getElementById("web-sep").remove();
+                document.getElementById("link-web2").remove();
             }
             else {
                 document.getElementById("web-sep").innerHTML = "  |  ";
@@ -293,6 +307,7 @@
             document.getElementById("link-icon1").setAttribute("href",activeSocialMediaCompany.twitterUrl);
             document.getElementById("img-icon2").setAttribute("src",activeSocialMediaCompany.linkedinIcon);
             document.getElementById("link-icon2").setAttribute("href",activeSocialMediaCompany.linkedinUrl);
+
 
 
 
