@@ -253,7 +253,7 @@
             }
         
         //web
-            if(gen.form.web2=="") {
+            if(gen.form.web1=="") {
                 document.getElementById("link-web1").remove();
                 document.getElementById("web-sep").remove();
             }
