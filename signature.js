@@ -229,7 +229,6 @@
         //phone
             if(gen.form.phone1=="") {
                 document.getElementById("phone1").remove();
-                document.getElementById("phone-sep").remove();
             }
             else {
                 document.getElementById("phone1").innerHTML = gen.form.phone1;
@@ -253,9 +252,8 @@
             }
         
         //web
-            if(gen.form.web2=="") {
+            if(gen.form.web1=="") {
                 document.getElementById("link-web1").remove();
-                document.getElementById("web-sep").remove();
             }
             else {
                 document.getElementById("link-web1").innerHTML = gen.form.web1;
@@ -308,7 +306,7 @@
             document.getElementById("img-icon2").setAttribute("src",activeSocialMediaCompany.linkedinIcon);
             document.getElementById("link-icon2").setAttribute("href",activeSocialMediaCompany.linkedinUrl);
 
-
+            document.querySelector("button#submit").remove();
 
 
     }
