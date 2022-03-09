@@ -285,10 +285,10 @@
             }
 
         //socials
-            document.getElementById("img-icon1").setAttribute("src",activeSocialMediaCompany.twitterIcon);
-            document.getElementById("link-icon1").setAttribute("href",activeSocialMediaCompany.twitterUrl);
-            document.getElementById("img-icon2").setAttribute("src",activeSocialMediaCompany.linkedinIcon);
-            document.getElementById("link-icon2").setAttribute("href",activeSocialMediaCompany.linkedinUrl);
+            document.getElementById("img-icon1").setAttribute("src",activeSocialMediaCompany.linkedinIcon);
+            document.getElementById("link-icon1").setAttribute("href",activeSocialMediaCompany.linkedinUrl);
+            document.getElementById("img-icon2").setAttribute("src",activeSocialMediaCompany.twitterIcon);
+            document.getElementById("link-icon2").setAttribute("href",activeSocialMediaCompany.twitterUrl);
 
             document.querySelector("button#submit").remove();
 
