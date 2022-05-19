@@ -20,8 +20,8 @@
     gen.companies[0].secondaryUrl = "";
     gen.companies[0].hasSecondaryURL = false;
 
-    gen.companies[0].phone1 = "+44 (0) 20 7100 1616";
-    gen.companies[0].phone2 = "+1 917 310 3307";
+    gen.companies[0].phone1 = "UK: +44 (0) 20 7100 1616";
+    gen.companies[0].phone2 = "US: +1 917 310 3307";
     gen.companies[0].phone3 = "";
     gen.companies[0].hasPhone2 = true;
     gen.companies[0].hasPhone3 = false;
@@ -45,8 +45,8 @@
     gen.companies[1].secondaryUrl = "www.tamarindogroup.com";
     gen.companies[1].hasSecondaryURL = true;
 
-    gen.companies[0].phone1 = "+44 (0) 20 7100 1616";
-    gen.companies[0].phone2 = "+1 917 310 3307";
+    gen.companies[0].phone1 = "UK: +44 (0) 20 7100 1616";
+    gen.companies[0].phone2 = "US: +1 917 310 3307";
     gen.companies[0].phone3 = "";
     gen.companies[0].hasPhone2 = true;
     gen.companies[0].hasPhone3 = false;
@@ -71,8 +71,8 @@
     gen.companies[2].secondaryUrl = "www.tamarindogroup.com";
     gen.companies[2].hasSecondaryURL = true;
 
-    gen.companies[0].phone1 = "+44 (0) 20 7100 1616";
-    gen.companies[0].phone2 = "+1 917 310 3307";
+    gen.companies[0].phone1 = "UK: +44 (0) 20 7100 1616";
+    gen.companies[0].phone2 = "US: +1 917 310 3307";
     gen.companies[0].phone3 = "";
     gen.companies[0].hasPhone2 = true;
     gen.companies[0].hasPhone3 = false;
@@ -200,10 +200,10 @@
             document.getElementById("name").innerHTML = gen.form.name;
 
         //title
-            document.getElementById("title").innerHTML = gen.form.title;
+            document.getElementById("title").innerHTML = "<i>" + gen.form.title + "</i>";
 
         //company
-            document.getElementById("company").innerHTML = gen.form.company;
+            document.getElementById("company").innerHTML = "<strong>" + gen.form.company + "</strong>";
         
         //email
             document.getElementById("link-email").innerHTML = gen.form.email;
@@ -212,26 +212,26 @@
         
         //phone
             if(gen.form.phone1=="") {
-                document.getElementById("phone1").remove();
+                document.getElementById("table-phone-1").remove();
             }
             else {
                 document.getElementById("phone1").innerHTML = gen.form.phone1;
             }
 
             if(gen.form.phone2=="") {
-                document.getElementById("phone2").remove();
-                document.getElementById("phone-sep").remove();
+                document.getElementById("table-phone-2").remove();
+                // document.getElementById("phone-sep").remove();
             }
             else {
                 document.getElementById("phone2").innerHTML = gen.form.phone2;
             }
 
             if(gen.form.phone3=="") {
-                document.getElementById("phone3").remove();
-                document.getElementById("phone-sep-2").remove();
+                document.getElementById("table-phone-3").remove();
+                // document.getElementById("phone-sep-2").remove();
             }
             else {
-                document.getElementById("phone-sep-2").innerHTML = "&nbsp; | &nbsp;";
+                // document.getElementById("phone-sep-2").innerHTML = "&nbsp; | &nbsp;";
                 document.getElementById("phone3").innerHTML = gen.form.phone3;
             }
         

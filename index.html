@@ -25,7 +25,7 @@
 		<div id="form">
 			<h1>Tamarindo Email Signature Generator</h1>
 
-			<div style="padding: 20px; margin: 20px; font-weight: 600; font-size: 16px; color: white; background-color: #EA6556">v1.03 - Updated 2022-03-09T10:08</div>
+			<div style="padding: 20px; margin: 20px; font-weight: 600; font-size: 16px; color: white; background-color: #EA6556">v1.04 - Updated 2022-05-19T10:28</div>
 
 			<div class="line">
 			</div>
@@ -73,10 +73,10 @@
 			</select>
 
 			<p class="label">Phone 1</p>
-			<input id="input-phone1" required="false" size="35" type="text" value="+44 (0) 20 7100 1616">
+			<input id="input-phone1" required="false" size="35" type="text" value="UK: +44 (0) 20 7100 1616">
 
 			<p class="label">Phone 2</p>
-			<input id="input-phone2" required="false" size="35" type="text" value="+1 917 310 3307">
+			<input id="input-phone2" required="false" size="35" type="text" value="US: +1 917 310 3307">
 
 			<p class="label">Phone 3 (leave blank if not needed)</p>
 			<input id="input-phone3" required="false" size="35" type="text" value="">
@@ -166,12 +166,26 @@
 									</tr>
 									<tr>
 										<td>
-											<table id="table-phone" cellspacing="0" cellpadding="1">
+											<table id="table-phone-1" cellspacing="0" cellpadding="1">
 												<tr>
-													<td id="phone1" style="color: #242b61; font-size: 12px; font-weight: 400; font-family: 'Lato', Helvetica, sans-serif;">+44 (0) 20 7100 5134</td>
-													<td id="phone-sep" style="color: #242b61; font-size: 12px; font-weight: 400; font-family: 'Lato', Helvetica, sans-serif;">&nbsp; | &nbsp;</td>
-													<td id="phone2" style="color: #242b61; font-size: 12px; font-weight: 400; font-family: 'Lato', Helvetica, sans-serif;">+1 917 310 3307</td>
-													<td id="phone-sep-2" style="color: #242b61; font-size: 12px; font-weight: 400; font-family: 'Lato', Helvetica, sans-serif;">&nbsp; | &nbsp;</td>
+													<td id="phone1" style="color: #242b61; font-size: 12px; font-weight: 400; font-family: 'Lato', Helvetica, sans-serif;">UK: +44 (0) 20 7100 1616</td>
+												</tr>
+											</table>
+										</td>
+									</tr>									
+									<tr>
+										<td>
+											<table id="table-phone-2" cellspacing="0" cellpadding="1">
+												<tr>
+													<td id="phone2" style="color: #242b61; font-size: 12px; font-weight: 400; font-family: 'Lato', Helvetica, sans-serif;">US: +1 917 310 3307</td>
+												</tr>
+											</table>
+										</td>
+									</tr>									
+									<tr>
+										<td>
+											<table id="table-phone-3" cellspacing="0" cellpadding="1">
+												<tr>
 													<td id="phone3" style="color: #242b61; font-size: 12px; font-weight: 400; font-family: 'Lato', Helvetica, sans-serif;"></td>
 												</tr>
 											</table>
